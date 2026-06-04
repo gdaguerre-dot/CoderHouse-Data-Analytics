@@ -1,4 +1,4 @@
-
+CREATE DATABASE Ventas_Tech_DB;
 -- ═════════════════════════════════════════════
 -- Ventas_Tech_DB
 -- Checkpoint Ingeniería de Datos
