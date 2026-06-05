@@ -8,8 +8,8 @@
 ---
 
 -- CONSULTA 1
--- Ventas por ciudad (territorio) y mes
----------------------------------------
+-- Ventas totales por ciudad y mes
+----------------------------------
 
 SELECT
 MONTH(v.fecha_venta) AS mes,
@@ -41,47 +41,33 @@ ORDER BY facturacion_total DESC;
 ---
 
 -- CONSULTA 3
--- Clientes activos
--------------------
+-- Clientes activos (cantidad de pedidos)
+-----------------------------------------
 
 SELECT
 c.nombre,
-COUNT(v.id_venta) AS cantidad_compras
+COUNT(v.id_venta) AS cantidad_pedidos
 FROM clientes c
 INNER JOIN ventas v
 ON c.id_cliente = v.id_cliente
 GROUP BY c.nombre
-ORDER BY cantidad_compras DESC;
+HAVING COUNT(v.id_venta) >= 1
+ORDER BY cantidad_pedidos DESC;
 
 ---
 
 -- CONSULTA 4
--- Performance comercial por ciudad
------------------------------------
+-- Ticket promedio por ciudad
+-----------------------------
 
 SELECT
 c.ciudad,
-
-```
-AVG(v.cantidad * v.precio_unitario) AS ticket_promedio,
-
-CASE
-    WHEN AVG(v.cantidad * v.precio_unitario) >
-         (
-            SELECT AVG(cantidad * precio_unitario)
-            FROM ventas
-         )
-    THEN 'Por encima del promedio'
-
-    ELSE 'Por debajo del promedio'
-END AS performance
-```
-
+AVG(v.cantidad * v.precio_unitario) AS ticket_promedio
 FROM ventas v
 INNER JOIN clientes c
 ON v.id_cliente = c.id_cliente
-
 GROUP BY c.ciudad
+HAVING AVG(v.cantidad * v.precio_unitario) > 200
 ORDER BY ticket_promedio DESC;
 
 ---
@@ -89,20 +75,22 @@ ORDER BY ticket_promedio DESC;
 ## -- HALLAZGOS DE NEGOCIO
 
 -- Hallazgo 1:
--- Laptop Pro 15 es el producto con mayor facturación
--- acumulada, alcanzando 3.600 en ventas.
+-- Computación es la categoría con mayor volumen
+-- de ventas, impulsada principalmente por los
+-- productos Laptop Pro 15 y Monitor 4K.
 
 -- Hallazgo 2:
--- Todos los clientes registrados realizaron
--- al menos dos compras, por lo que la base
--- presenta un 100% de clientes activos.
+-- Todos los clientes registran al menos una compra,
+-- por lo que la base presenta un 100% de clientes
+-- activos durante el período analizado.
 
 -- Hallazgo 3:
--- Las ciudades asociadas a productos de la
--- categoría Computación presentan tickets
--- promedio superiores al promedio global.
+-- Existen diferencias en el ticket promedio entre
+-- ciudades, lo que permite identificar territorios
+-- con mayor potencial comercial y oportunidades
+-- de crecimiento.
 
 -- Hallazgo 4:
--- El análisis por ciudad permite aproximar
--- el desempeño territorial solicitado en
--- el brief de RetailPro.
+-- El ranking de productos permite detectar cuáles
+-- concentran la mayor facturación y facilitan la
+-- planificación comercial y de stock.
