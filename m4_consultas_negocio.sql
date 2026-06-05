@@ -2,140 +2,101 @@
 -- RetailPro - Consultas de Negocio
 -- Módulo 4 - SQL para Data Analytics
 -- Autor: Gerónimo Daguerre
--- Fecha: Junio 2026
+-- Base utilizada: Ventas_Tech_DB
 -- ═══════════════════════════════════════════════
-
--- Contexto:
--- Las siguientes consultas fueron diseñadas a partir
--- del modelo relacional RetailPro definido en el brief
--- analítico del proyecto.
---------------------------
-
--- Tablas utilizadas:
--- CLIENTES
--- PRODUCTOS
--- VENTAS
--- TERRITORIOS
---------------
-
--- Objetivo:
--- Obtener indicadores de negocio mediante funciones
--- de agregación, agrupamiento, filtros de grupos,
--- rankings y clasificaciones para apoyar futuras
--- visualizaciones en Power BI.
 
 ---
 
 -- CONSULTA 1
--- Ventas totales por región
-----------------------------
+-- Ventas totales por categoría
+-------------------------------
 
 SELECT
-t.region,
-SUM(v.total_venta) AS ventas_totales
+c.nombre_categoria,
+SUM(v.cantidad * v.precio_unitario) AS ventas_totales
 FROM ventas v
-INNER JOIN territorios t
-ON v.id_territorio = t.id_territorio
-GROUP BY t.region
+INNER JOIN productos p
+ON v.id_producto = p.id_producto
+INNER JOIN categorias c
+ON p.id_categoria = c.id_categoria
+GROUP BY c.nombre_categoria
 ORDER BY ventas_totales DESC;
-
--- Interpretación:
--- Permite identificar qué regiones generan
--- el mayor volumen de ingresos para RetailPro.
 
 ---
 
 -- CONSULTA 2
--- Ticket promedio por región
------------------------------
+-- Cantidad de compras por cliente
+----------------------------------
 
 SELECT
-t.region,
-AVG(v.total_venta) AS ticket_promedio
-FROM ventas v
-INNER JOIN territorios t
-ON v.id_territorio = t.id_territorio
-GROUP BY t.region
-ORDER BY ticket_promedio DESC;
-
--- Interpretación:
--- Permite comparar el valor promedio de las
--- transacciones realizadas en cada región.
+cl.nombre,
+COUNT(v.id_venta) AS cantidad_compras
+FROM clientes cl
+INNER JOIN ventas v
+ON cl.id_cliente = v.id_cliente
+GROUP BY cl.nombre
+ORDER BY cantidad_compras DESC;
 
 ---
 
 -- CONSULTA 3
--- Regiones con ventas superiores al promedio
----------------------------------------------
+-- Ticket promedio por categoría
+--------------------------------
 
 SELECT
-t.region,
-SUM(v.total_venta) AS ventas_totales
+c.nombre_categoria,
+AVG(v.cantidad * v.precio_unitario) AS ticket_promedio
 FROM ventas v
-INNER JOIN territorios t
-ON v.id_territorio = t.id_territorio
-GROUP BY t.region
-HAVING SUM(v.total_venta) >
-(
-SELECT AVG(total_venta)
-FROM ventas
-)
-ORDER BY ventas_totales DESC;
-
--- Interpretación:
--- Identifica regiones cuyo desempeño comercial
--- supera el promedio general registrado.
+INNER JOIN productos p
+ON v.id_producto = p.id_producto
+INNER JOIN categorias c
+ON p.id_categoria = c.id_categoria
+GROUP BY c.nombre_categoria
+HAVING AVG(v.cantidad * v.precio_unitario) > 200
+ORDER BY ticket_promedio DESC;
 
 ---
 
 -- CONSULTA 4
--- Clasificación regional mediante CASE WHEN
---------------------------------------------
+-- Clasificación de ventas mediante CASE WHEN
+---------------------------------------------
 
 SELECT
-t.region,
+p.nombre_producto,
+SUM(v.cantidad * v.precio_unitario) AS ventas_totales,
 
 ```
-AVG(v.total_venta) AS ticket_promedio,
-
 CASE
-    WHEN AVG(v.total_venta) >
-         (SELECT AVG(total_venta)
-          FROM ventas)
-    THEN 'Por encima del promedio'
-
-    ELSE 'Por debajo del promedio'
-END AS rendimiento_region
+    WHEN SUM(v.cantidad * v.precio_unitario) >= 1000
+        THEN 'Alto rendimiento'
+    WHEN SUM(v.cantidad * v.precio_unitario) >= 500
+        THEN 'Rendimiento medio'
+    ELSE 'Bajo rendimiento'
+END AS clasificacion
 ```
 
 FROM ventas v
-INNER JOIN territorios t
-ON v.id_territorio = t.id_territorio
+INNER JOIN productos p
+ON v.id_producto = p.id_producto
 
-GROUP BY t.region
-ORDER BY ticket_promedio DESC;
+GROUP BY p.nombre_producto
+ORDER BY ventas_totales DESC;
 
--- Interpretación:
--- Clasifica cada región según su rendimiento
--- relativo respecto al promedio general.
+---
 
--- ==========================================
--- HALLAZGOS DE NEGOCIO
--- ==========================================
+## -- HALLAZGOS DE NEGOCIO
 
 -- Hallazgo 1:
--- El análisis de ventas por región permite
--- identificar los territorios con mayor
--- contribución a la facturación total.
+-- La categoría Computación generó ventas por 4.950,
+-- siendo la principal fuente de ingresos y representando
+-- aproximadamente el 73,7% del total facturado.
 
 -- Hallazgo 2:
--- El ticket promedio regional facilita la
--- comparación del comportamiento comercial
--- entre diferentes mercados geográficos.
+-- Computación registra el ticket promedio más alto
+-- (1.237,50), muy por encima de Accesorios (257,25),
+-- lo que indica una mayor contribución por transacción.
 
 -- Hallazgo 3:
--- La clasificación mediante CASE WHEN permite
--- detectar rápidamente regiones por encima
--- y por debajo del promedio general, ayudando
--- a priorizar acciones comerciales y futuras
--- visualizaciones en Power BI.
+-- Audio (360) y Almacenamiento (390) presentan los
+-- menores niveles de facturación, lo que podría justificar
+-- acciones comerciales específicas para impulsar sus ventas.
