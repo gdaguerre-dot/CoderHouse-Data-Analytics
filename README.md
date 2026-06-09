@@ -1,149 +1,252 @@
-Este repositorio reúne los ejercicios, prácticas y proyectos desarrollados durante mi formación en Data Analytics. El objetivo es documentar el proceso de aprendizaje, consolidar conocimientos técnicos y construir un portfolio orientado al análisis de datos, modelado de bases de datos y Business Intelligence.
+# Data Analytics – Bitácora de Aprendizaje
+### Curso de Data Analytics – Coderhouse
+**Autor:** Gerónimo Daguerre
 
-Módulo 1 – Introducción al Análisis de Datos
+---
 
-Durante el Módulo 1 incorporé los fundamentos del análisis de datos y comprendí el rol estratégico que cumplen los datos en la toma de decisiones dentro de las organizaciones.
+# Introducción
 
-Aprendí las diferencias entre datos, información y conocimiento, así como las principales etapas del ciclo de vida de los datos: recolección, almacenamiento, procesamiento, análisis y visualización.
+Este repositorio documenta mi recorrido de aprendizaje en el curso de Data Analytics de Coderhouse.
 
-También conocí los distintos perfiles profesionales que intervienen en el ecosistema de datos, incluyendo Data Analyst, Data Scientist y Data Engineer, comprendiendo las responsabilidades y herramientas asociadas a cada uno.
+A lo largo de los distintos módulos trabajé conceptos fundamentales de análisis de datos, modelado relacional, SQL y construcción de consultas para resolver problemas de negocio reales.
 
-Finalmente, trabajé conceptos básicos de métricas, indicadores y preguntas de negocio, desarrollando una visión analítica orientada a transformar datos en información útil para la toma de decisiones.
+Cada módulo incluye ejercicios prácticos, entregables y proyectos orientados a desarrollar competencias aplicadas al análisis de datos.
 
-Módulo 2 – Modelado y Diseño de Bases de Datos
+---
+
+# Módulo 1 – Introducción al Análisis de Datos
+
+Durante el Módulo 1 incorporé los conceptos fundamentales del análisis de datos y su aplicación en entornos de negocio.
+
+Aprendí a diferenciar datos, información y conocimiento, comprendiendo cómo los datos pueden transformarse en información útil para la toma de decisiones.
+
+También trabajé sobre el ciclo de vida de los datos, la importancia de la calidad de la información y el rol del analista dentro de una organización.
+
+Entre los principales contenidos abordados se destacan:
+
+- Introducción al ecosistema de datos.
+- Rol del Data Analyst.
+- Tipos de datos y fuentes de información.
+- Calidad de datos.
+- Pensamiento analítico orientado al negocio.
+- Definición de métricas e indicadores.
+
+**Aprendizaje clave:** comprender cómo los datos generan valor cuando se transforman en información accionable para la toma de decisiones.
+
+---
+
+# Módulo 2 – Modelos y Diseño de Bases de Datos
 
 Durante el Módulo 2 trabajé conceptos fundamentales de modelado y arquitectura de datos.
 
-Aprendí a identificar entidades, atributos y relaciones mediante modelos Entidad–Relación (ER), y a traducir esos modelos a estructuras relacionales utilizando claves primarias y foráneas.
+Aprendí a identificar entidades, atributos y relaciones mediante modelos Entidad-Relación (ER), y a traducir esos modelos a estructuras relacionales utilizando claves primarias y foráneas.
 
-También estudié los principios de normalización (1NF, 2NF y 3NF) para reducir redundancias, mejorar la integridad de los datos y optimizar el almacenamiento de información.
+También estudié los principios de normalización para reducir redundancias y mejorar la integridad de los datos.
 
-Además, desarrollé modelos de datos orientados a resolver problemas de negocio reales, comprendiendo cómo un buen diseño impacta directamente en la calidad de los análisis posteriores.
+Entre los principales contenidos abordados se destacan:
 
-Como actividad práctica diseñé modelos relacionales para distintos casos de negocio y construí diagramas ER aplicando buenas prácticas de modelado.
+- Modelado Entidad-Relación (ER).
+- Entidades y atributos.
+- Claves primarias y claves foráneas.
+- Relaciones 1:1, 1:N y N:M.
+- Diseño de bases de datos relacionales.
+- Normalización (1NF, 2NF y 3NF).
 
-Módulo 3 – Introducción a SQL y Sublenguajes
+**Aprendizaje clave:** diseñar modelos de datos eficientes y escalables antes de comenzar cualquier análisis.
+
+---
+
+# Módulo 3 – Introducción a SQL y Sublenguajes
 
 Durante el Módulo 3 comencé a trabajar con SQL como lenguaje principal para interactuar con bases de datos relacionales.
 
-Aprendí la estructura básica de una consulta SQL utilizando la sentencia SELECT para recuperar información almacenada en tablas.
+Aprendí a crear estructuras de datos, consultar información y manipular registros utilizando los principales sublenguajes de SQL.
 
-También incorporé los distintos sublenguajes de SQL:
+Entre los principales contenidos abordados se destacan:
 
-DDL (Data Definition Language) para definir estructuras.
-DML (Data Manipulation Language) para insertar, modificar y eliminar datos.
-DQL (Data Query Language) para realizar consultas.
-DCL (Data Control Language) para administrar permisos.
-TCL (Transaction Control Language) para gestionar transacciones.
+### DDL (Data Definition Language)
 
-Además, practiqué operaciones básicas de filtrado mediante WHERE, ordenamiento con ORDER BY y limitación de resultados utilizando TOP o LIMIT según el motor de base de datos.
+- CREATE
+- ALTER
+- DROP
 
-Este módulo sentó las bases para comenzar a trabajar con consultas analíticas más complejas en los módulos posteriores.
+### DML (Data Manipulation Language)
 
-Módulo 4 – Sintaxis SQL y Manipulación de Datos
+- INSERT
+- UPDATE
+- DELETE
 
-Durante el Módulo 4 profundicé en el uso de SQL para la extracción, filtrado y organización de información almacenada en bases de datos relacionales.
+### DQL (Data Query Language)
 
-Comencé trabajando con la sentencia SELECT, aprendiendo a consultar tablas completas y a seleccionar únicamente las columnas necesarias para cada análisis.
+- SELECT
+- WHERE
+- ORDER BY
 
-También incorporé el uso de alias mediante AS para mejorar la legibilidad de los resultados y facilitar la interpretación de consultas complejas.
+### TCL (Transaction Control Language)
 
-Trabajé distintos operadores de filtrado utilizando WHERE junto con:
+- COMMIT
+- ROLLBACK
 
-Operadores de comparación (=, <>, >, <, >=, <=).
-Operadores lógicos (AND, OR, NOT).
-BETWEEN.
-IN.
-LIKE.
-IS NULL.
+### DCL (Data Control Language)
 
-Aprendí a ordenar resultados mediante ORDER BY y a limitar registros utilizando TOP y LIMIT.
+- GRANT
+- REVOKE
 
-Posteriormente profundicé en funciones de agregación:
+**Aprendizaje clave:** comprender cómo se crean, administran y consultan bases de datos utilizando SQL.
 
-COUNT()
-SUM()
-AVG()
-MIN()
-MAX()
+---
 
-y su combinación con GROUP BY para resumir información según diferentes dimensiones de análisis.
+# Módulo 4 – Sintaxis SQL y Manipulación de Datos
 
-También trabajé filtros sobre datos agregados utilizando HAVING y desarrollé consultas orientadas a responder preguntas de negocio reales como:
+Durante el Módulo 4 profundicé en la construcción de consultas SQL orientadas al análisis de datos.
 
-Ranking de productos.
-Ventas por región.
-Clientes activos.
-Indicadores de desempeño comercial.
+Aprendí a filtrar información, ordenar resultados, aplicar funciones de agregación y realizar agrupamientos para responder preguntas de negocio.
 
-Como proyecto práctico construí un esquema relacional completo para una empresa de tecnología, generando consultas analíticas y documentando hallazgos de negocio a partir de los resultados obtenidos.
+Entre los principales contenidos abordados se destacan:
 
-Módulo 5 – JOINs, Orden de Ejecución y Combinación de Resultados
+- SELECT.
+- WHERE.
+- ORDER BY.
+- LIMIT / TOP.
+- DISTINCT.
+- Alias (AS).
+- Operadores lógicos.
+- Funciones de agregación:
+  - SUM()
+  - COUNT()
+  - AVG()
+  - MIN()
+  - MAX()
+- GROUP BY.
+- HAVING.
+- CASE WHEN.
 
-Durante el Módulo 5 profundicé en uno de los conceptos más importantes del análisis de datos con SQL: la combinación de información proveniente de múltiples tablas.
+Además desarrollé consultas analíticas para:
 
-Aprendí a utilizar distintos tipos de JOIN según la necesidad de negocio:
+- Ranking de productos.
+- Ventas por región.
+- Clientes activos.
+- Indicadores comerciales.
 
-INNER JOIN para recuperar únicamente registros coincidentes entre tablas.
-LEFT JOIN para conservar todos los registros de la tabla principal e identificar faltantes mediante valores NULL.
-RIGHT JOIN y FULL OUTER JOIN para escenarios donde es necesario conservar registros de ambas fuentes.
+**Aprendizaje clave:** transformar datos transaccionales en información relevante para la toma de decisiones.
 
-También trabajé la detección de inconsistencias y registros sin correspondencia utilizando LEFT JOIN combinado con filtros WHERE IS NULL, una técnica ampliamente utilizada en auditorías de datos y procesos de conciliación.
+---
 
-Además, incorporé los operadores:
+# Módulo 5 – JOINs, UNION y Consolidación de Datos
 
-UNION
-UNION ALL
+Durante el Módulo 5 trabajé técnicas avanzadas de combinación y consolidación de datos provenientes de múltiples tablas y fuentes.
 
-para consolidar resultados provenientes de múltiples consultas.
+Aprendí cómo integrar información relacional mediante JOINs y cómo consolidar conjuntos de resultados utilizando UNION y UNION ALL.
 
-Comprendí que:
+Entre los principales contenidos abordados se destacan:
 
-UNION elimina registros duplicados.
-UNION ALL conserva todos los registros y ofrece un mejor rendimiento cuando no es necesario eliminar duplicados.
+### INNER JOIN
 
-Otro aprendizaje clave fue comprender el orden real de ejecución de SQL:
+Permite obtener únicamente los registros que tienen coincidencia en ambas tablas.
 
-FROM / JOIN
-WHERE
-GROUP BY
-HAVING
-SELECT
-DISTINCT
-ORDER BY
-LIMIT / TOP
+Aplicaciones:
 
-Este conocimiento me permitió entender con mayor profundidad cómo procesa las consultas el motor de base de datos y cómo optimizar consultas analíticas.
+- Clientes con pedidos.
+- Ventas con información de productos.
+- Construcción de vistas analíticas para Power BI.
 
-Como práctica desarrollé ejercicios orientados a:
+### LEFT JOIN
 
-Construcción de vistas enriquecidas para herramientas de Business Intelligence.
-Detección de clientes sin actividad y productos sin ventas.
-Consolidación de datos mediante UNION y UNION ALL.
-Auditorías de calidad e integración de datos utilizando JOINs.
-Herramientas Utilizadas
-SQL
-MySQL
-SQL Server (conceptos)
-Draw.io
-Lucidchart
-Git
-GitHub
-Próximos Pasos
+Permite conservar todos los registros de la tabla principal, incluso cuando no existe coincidencia en la tabla relacionada.
 
-En los siguientes módulos continuaré profundizando en:
+Aplicaciones:
 
-Consultas SQL avanzadas.
-Subconsultas.
-CTEs (Common Table Expressions).
-Funciones de ventana.
-Optimización de consultas.
-Business Intelligence.
-Power BI.
-Visualización de datos.
-Proyectos integradores orientados a análisis de negocio.
+- Clientes sin compras.
+- Productos sin ventas.
+- Auditorías de integridad de datos.
 
-Autor: Gerónimo Daguerre
-Curso: Data Analytics – Coderhouse
-Año: 2026
+### RIGHT JOIN
 
+Permite conservar todos los registros de la tabla derecha y detectar elementos sin correspondencia en la tabla izquierda.
+
+### FULL OUTER JOIN
+
+Permite obtener todos los registros de ambas tablas, identificando coincidencias y diferencias.
+
+Aplicaciones:
+
+- Procesos de conciliación.
+- Auditorías de sistemas.
+- Integración de bases de datos.
+
+### UNION
+
+Combina resultados eliminando registros duplicados.
+
+Aplicaciones:
+
+- Catálogos maestros.
+- Consolidación de clientes únicos.
+- Listados sin duplicados.
+
+### UNION ALL
+
+Combina resultados preservando todos los registros.
+
+Aplicaciones:
+
+- Consolidación de ventas.
+- Inventarios distribuidos.
+- Logs y auditorías.
+
+### Orden de ejecución de SQL
+
+También estudié cómo procesa internamente una consulta el motor de base de datos:
+
+1. FROM / JOIN
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. DISTINCT
+7. ORDER BY
+8. LIMIT / TOP
+
+Comprender este flujo permitió interpretar errores frecuentes y optimizar consultas de forma más eficiente.
+
+**Aprendizaje clave:** integrar datos provenientes de múltiples tablas y fuentes para construir datasets analíticos completos y consistentes.
+
+---
+
+# Competencias Desarrolladas
+
+A lo largo del curso desarrollé habilidades en:
+
+- Modelado de datos.
+- Diseño de bases de datos relacionales.
+- Normalización.
+- SQL para análisis de datos.
+- Construcción de consultas complejas.
+- JOINs y consolidación de información.
+- Agregaciones y métricas de negocio.
+- Detección de inconsistencias de datos.
+- Preparación de datasets para Business Intelligence.
+- Pensamiento analítico orientado a la toma de decisiones.
+
+---
+
+# Próximos Pasos
+
+Durante los siguientes módulos continuaré profundizando en:
+
+- SQL avanzado.
+- Optimización de consultas.
+- Business Intelligence.
+- Power BI.
+- Visualización de datos.
+- Storytelling con datos.
+- Construcción de dashboards.
+- Proyectos integrales de Data Analytics.
+
+---
+
+# Conclusión
+
+Este repositorio funciona como una bitácora de aprendizaje que documenta mi evolución dentro del curso de Data Analytics de Coderhouse.
+
+El recorrido realizado hasta el momento me permitió adquirir una base sólida en modelado de datos, SQL y análisis de información, desarrollando competencias aplicables a proyectos reales de Business Intelligence y Data Analytics.
