@@ -298,6 +298,102 @@ Por ejemplo, una empresa podría comparar su catálogo maestro de productos con 
 Este tipo de consulta permite obtener una visión completa de todas las coincidencias y discrepancias entre ambas fuentes de información.
 
 Además, este enfoque resulta especialmente útil en procesos ETL, migraciones de sistemas, conciliación de bases de datos y controles de calidad previos a la construcción de dashboards, reportes ejecutivos o modelos analíticos.
+# RetailChain – UNION y UNION ALL
+
+## Objetivo
+
+Consolidar información proveniente de dos sucursales utilizando los operadores UNION y UNION ALL para comprender el tratamiento de registros duplicados y su impacto en el análisis de datos.
+
+---
+
+## ¿Cuántas filas devuelve cada consulta y por qué son distintas?
+
+La consulta con **UNION** devuelve **11 filas**, mientras que la consulta con **UNION ALL** devuelve **14 filas**.
+
+La diferencia se debe a que **UNION elimina registros duplicados** antes de devolver el resultado final.
+
+En este ejercicio existen 14 registros entre ambas sucursales (7 en la Sucursal Norte y 7 en la Sucursal Sur). Sin embargo, los productos:
+
+* 103 – Monitor 4K 27"
+* 104 – Teclado Mecánico
+* 106 – SSD Externo 1TB
+
+aparecen en ambas sucursales.
+
+Al seleccionar únicamente las columnas `id_producto`, `nombre_producto` y `categoria`, UNION conserva una sola aparición de cada producto repetido, reduciendo el resultado final a 11 filas.
+
+Por el contrario, UNION ALL conserva los 14 registros originales porque no elimina duplicados.
+
+---
+
+## ¿Por qué UNION ALL es más eficiente que UNION?
+
+UNION ALL es más eficiente porque simplemente concatena los resultados de ambas consultas.
+
+Por el contrario, UNION realiza un procesamiento adicional para identificar y eliminar registros duplicados, lo que implica mayor consumo de CPU y memoria.
+
+Por esta razón, cuando no es necesario eliminar duplicados, UNION ALL suele ofrecer un mejor rendimiento, especialmente en bases de datos con grandes volúmenes de información.
+
+---
+
+## ¿En qué casos de negocio usarías cada uno?
+
+### UNION
+
+* Consolidar clientes únicos provenientes de distintos sistemas CRM.
+* Crear un catálogo maestro de productos sin registros repetidos.
+* Unificar listas de proveedores evitando duplicados.
+
+### UNION ALL
+
+* Unificar ventas históricas y actuales para análisis de tendencias.
+* Consolidar registros de auditoría o logs donde cada evento debe conservarse.
+* Integrar transacciones provenientes de múltiples sucursales para calcular volumen total de operaciones.
+
+---
+
+## ¿Qué ocurre si las columnas no coinciden en número o tipo?
+
+Para utilizar UNION o UNION ALL ambas consultas deben devolver la misma cantidad de columnas y en el mismo orden.
+
+Si una consulta devuelve más columnas que la otra, SQL genera un error.
+
+También pueden producirse errores cuando los tipos de datos son incompatibles entre columnas equivalentes.
+
+### Ejemplo
+
+```sql
+SELECT id_producto, nombre_producto
+FROM inventario_sucursal_norte
+
+UNION
+
+SELECT id_producto
+FROM inventario_sucursal_sur;
+```
+
+Esta consulta genera un error porque la primera parte devuelve dos columnas y la segunda solo una.
+
+Por lo tanto, para utilizar correctamente UNION o UNION ALL es necesario que ambas consultas tengan la misma estructura y tipos de datos compatibles.
+
+## Consideraciones de rendimiento
+
+Aunque UNION y UNION ALL permiten combinar resultados de múltiples consultas, presentan diferencias de rendimiento.
+
+UNION elimina registros duplicados, lo que obliga al motor SQL a realizar operaciones adicionales de ordenamiento o comparación para identificar coincidencias.
+
+UNION ALL simplemente concatena los conjuntos de resultados sin verificar duplicados, por lo que generalmente requiere menos recursos y ofrece mejores tiempos de ejecución en tablas de gran volumen.
+
+Por esta razón, cuando no es necesario eliminar duplicados, UNION ALL suele ser la alternativa recomendada.
+---
+
+## Autor
+
+Gerónimo Daguerre
+
+Proyecto académico desarrollado como parte de la formación en Data Analytics.
+
+Este ejercicio permitió aplicar operadores de conjuntos en SQL para consolidar información proveniente de múltiples fuentes, comprendiendo las diferencias funcionales y de rendimiento entre UNION y UNION ALL en escenarios reales de análisis de datos.
 
 ### Resultados obtenidos
 
