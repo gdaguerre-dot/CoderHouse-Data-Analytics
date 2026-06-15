@@ -1,0 +1,136 @@
+# Pipeline ETL Completo: de datos crudos a modelo confiable en Power BI
+
+## Objetivo
+
+El objetivo de esta práctica fue construir un proceso ETL completo utilizando Power BI y Power Query, aplicando técnicas de limpieza, transformación y enriquecimiento de datos sobre un conjunto de información comercial de una empresa ficticia denominada TechStore.
+
+El trabajo permitió integrar conceptos de modelado de datos, calidad de datos, transformación mediante Power Query y documentación de procesos utilizando lenguaje M.
+
+---
+
+## Fuente de datos
+
+Se utilizó el archivo proporcionado por la cátedra:
+
+**Pipeline_ETL_Dataset.xlsx**
+
+El dataset contiene cuatro tablas relacionadas:
+
+* clientes
+* productos
+* ventas
+* categorias
+
+Estas tablas representan una estructura típica de análisis comercial basada en dimensiones y hechos.
+
+---
+
+## Transformaciones realizadas
+
+### Tabla Dim_Clientes
+
+Se realizaron las siguientes acciones:
+
+* Promoción de encabezados.
+* Corrección de tipos de datos.
+* Eliminación de registros duplicados utilizando la columna id_cliente como clave de referencia.
+* Reemplazo de valores nulos en email por "Sin email".
+* Reemplazo de valores nulos en ciudad por "Sin datos".
+
+### Tabla Dim_Productos
+
+Se realizaron las siguientes acciones:
+
+* Promoción de encabezados.
+* Corrección de tipos de datos.
+* Eliminación de registros duplicados utilizando la columna id_producto.
+* Reemplazo de categoría nula por "Sin Categoría".
+* Eliminación del producto con precio nulo debido a que el precio es un atributo crítico para el cálculo de ingresos y métricas comerciales.
+
+### Tabla Dim_Categorias
+
+Se verificaron tipos de datos y consistencia de la información.
+
+### Tabla Fact_Ventas
+
+Se verificaron tipos de datos y estructura de la tabla de hechos.
+
+---
+
+## Nomenclatura profesional aplicada
+
+Las consultas fueron renombradas siguiendo convenciones habituales de Business Intelligence:
+
+| Nombre original | Nombre final   |
+| --------------- | -------------- |
+| clientes        | Dim_Clientes   |
+| productos       | Dim_Productos  |
+| categorias      | Dim_Categorias |
+| ventas          | Fact_Ventas    |
+
+---
+
+## Enriquecimiento mediante Merge
+
+Se creó una nueva consulta denominada:
+
+**Fact_Ventas_Enriquecida**
+
+Mediante la operación Merge se vinculó Fact_Ventas con Dim_Productos utilizando la columna id_producto.
+
+Como resultado se incorporaron las columnas:
+
+* nombre_producto
+* categoria
+
+Esto permitió enriquecer la tabla de hechos con atributos descriptivos útiles para futuros análisis y visualizaciones.
+
+---
+
+## Documentación en Lenguaje M
+
+Se incorporaron comentarios técnicos dentro del Editor Avanzado para documentar decisiones de transformación.
+
+Ejemplos:
+
+```m
+// Se eliminan duplicados por id_cliente para garantizar
+// que la clave primaria sea única y evitar problemas
+// de cardinalidad en el modelo de Power BI
+```
+
+```m
+// Se elimina el producto con precio nulo porque
+// el precio es un atributo crítico para calcular
+// ingresos, márgenes y métricas comerciales
+```
+
+---
+
+## Validación final
+
+Se verificó que:
+
+* No existieran errores de carga.
+* Los tipos de datos fueran correctos.
+* Las transformaciones se aplicaran correctamente.
+* El Merge incorporara la información esperada.
+* Las consultas mantuvieran una estructura consistente para su utilización posterior en Power BI.
+
+Conteo final de registros:
+
+| Tabla                   | Registros |
+| ----------------------- | --------- |
+| Dim_Clientes            | 11        |
+| Dim_Productos           | 11        |
+| Dim_Categorias          | 4         |
+| Fact_Ventas             | 50        |
+| Fact_Ventas_Enriquecida | 50        |
+
+---
+
+## Conclusiones
+
+Esta práctica permitió comprender el rol fundamental del proceso ETL dentro de un proyecto de Business Intelligence. Se trabajó sobre problemas reales de calidad de datos, aplicando criterios de limpieza, tipificación, normalización y enriquecimiento de información mediante Power Query y lenguaje M.
+
+El resultado final es un modelo limpio, documentado y preparado para la construcción de métricas, relaciones y visualizaciones analíticas en Power BI.
