@@ -1,218 +1,112 @@
-# Data Analytics – Bitácora de Aprendizaje
-### Curso de Data Analytics – Coderhouse
+# Data Analytics – Coderhouse
+
 **Autor:** Gerónimo Daguerre
 
----
+## Descripción
 
-# Introducción
+Este repositorio reúne los trabajos prácticos, ejercicios, proyectos y documentación técnica desarrollados durante la cursada de Data Analytics en Coderhouse.
 
-Este repositorio documenta mi recorrido de aprendizaje en el curso de Data Analytics de Coderhouse.
+El objetivo es documentar el recorrido técnico realizado durante la formación y servir como repositorio de consulta sobre las herramientas, metodologías y técnicas aplicadas en cada módulo.
 
-A lo largo de los distintos módulos trabajé conceptos fundamentales de análisis de datos, modelado relacional, SQL y construcción de consultas para resolver problemas de negocio reales.
-
-Cada módulo incluye ejercicios prácticos, entregables y proyectos orientados a desarrollar competencias aplicadas al análisis de datos.
+Durante la cursada se trabajó sobre conceptos vinculados al modelado de datos, bases de datos relacionales, SQL, procesos ETL, Business Intelligence, Power BI, DAX, estadística descriptiva e inteligencia artificial aplicada al análisis de datos.
 
 ---
 
-# Módulo 1 – Introducción al Análisis de Datos
+# Competencias Técnicas Desarrolladas
 
-Durante el Módulo 1 incorporé los conceptos fundamentales del análisis de datos y su aplicación en entornos de negocio.
-
-Aprendí a diferenciar datos, información y conocimiento, comprendiendo cómo los datos pueden transformarse en información útil para la toma de decisiones.
-
-También trabajé sobre el ciclo de vida de los datos, la importancia de la calidad de la información y el rol del analista dentro de una organización.
-
-Entre los principales contenidos abordados se destacan:
-
-- Introducción al ecosistema de datos.
-- Rol del Data Analyst.
-- Tipos de datos y fuentes de información.
-- Calidad de datos.
-- Pensamiento analítico orientado al negocio.
-- Definición de métricas e indicadores.
-
-**Aprendizaje clave:** comprender cómo los datos generan valor cuando se transforman en información accionable para la toma de decisiones.
+* Modelado de datos
+* Bases de datos relacionales
+* SQL
+* ETL y transformación de datos
+* Power Query
+* Lenguaje M
+* Power BI
+* DAX
+* Data Storytelling
+* Estadística descriptiva
+* Inteligencia Artificial aplicada al análisis
 
 ---
 
-# Módulo 2 – Modelos y Diseño de Bases de Datos
+# Estructura del Repositorio
 
-Durante el Módulo 2 trabajé conceptos fundamentales de modelado y arquitectura de datos.
+## Módulo 1 – Fundamentos de Data Analytics
 
-Aprendí a identificar entidades, atributos y relaciones mediante modelos Entidad-Relación (ER), y a traducir esos modelos a estructuras relacionales utilizando claves primarias y foráneas.
+* Ecosistema de datos.
+* Business Intelligence.
+* CRISP-DM.
+* KPIs.
+* Caso práctico Patria Gráfica.
 
-También estudié los principios de normalización para reducir redundancias y mejorar la integridad de los datos.
+## Módulo 2 – Modelado y Arquitectura de Datos
 
-Entre los principales contenidos abordados se destacan:
+* Diagramas Entidad-Relación.
+* Normalización.
+* Claves primarias y foráneas.
+* Modelado dimensional.
 
-- Modelado Entidad-Relación (ER).
-- Entidades y atributos.
-- Claves primarias y claves foráneas.
-- Relaciones 1:1, 1:N y N:M.
-- Diseño de bases de datos relacionales.
-- Normalización (1NF, 2NF y 3NF).
+## Módulos 3, 4 y 5 – SQL
 
-**Aprendizaje clave:** diseñar modelos de datos eficientes y escalables antes de comenzar cualquier análisis.
+* Consultas SQL.
+* Funciones de agregación.
+* Filtrado y agrupamiento.
+* JOINs.
+* UNION y UNION ALL.
 
----
+## Módulo 6 – ETL y Power BI
 
-# Módulo 3 – Introducción a SQL y Sublenguajes
+* Power Query.
+* Limpieza de datos.
+* Transformaciones.
+* Lenguaje M.
+* Modelado dimensional.
 
-Durante el Módulo 3 comencé a trabajar con SQL como lenguaje principal para interactuar con bases de datos relacionales.
+## Módulo 7 – Visualización y Storytelling
 
-Aprendí a crear estructuras de datos, consultar información y manipular registros utilizando los principales sublenguajes de SQL.
+* Dashboards.
+* Diseño visual.
+* Storytelling con datos.
+* Comunicación de insights.
 
-Entre los principales contenidos abordados se destacan:
+## Módulo 8 – Modelado Analítico con DAX
 
-### DDL (Data Definition Language)
+* Medidas.
+* Contextos.
+* Inteligencia de tiempo.
+* Optimización DAX.
 
-- CREATE
-- ALTER
-- DROP
+## Módulo 9 – Inteligencia Artificial Aplicada al Análisis
 
-### DML (Data Manipulation Language)
+* Prompt Engineering.
+* SQL asistido por IA.
+* DAX asistido por IA.
+* Automatización de tareas analíticas.
 
-- INSERT
-- UPDATE
-- DELETE
+## Módulo 10 – Estadística y Publicación de Dashboards
 
-### DQL (Data Query Language)
-
-- SELECT
-- WHERE
-- ORDER BY
-
-### TCL (Transaction Control Language)
-
-- COMMIT
-- ROLLBACK
-
-### DCL (Data Control Language)
-
-- GRANT
-- REVOKE
-
-**Aprendizaje clave:** comprender cómo se crean, administran y consultan bases de datos utilizando SQL.
-
----
-
-# Módulo 4 – Sintaxis SQL y Manipulación de Datos
-
-Durante el Módulo 4 profundicé en la construcción de consultas SQL orientadas al análisis de datos.
-
-Aprendí a filtrar información, ordenar resultados, aplicar funciones de agregación y realizar agrupamientos para responder preguntas de negocio.
-
-Entre los principales contenidos abordados se destacan:
-
-- SELECT.
-- WHERE.
-- ORDER BY.
-- LIMIT / TOP.
-- DISTINCT.
-- Alias (AS).
-- Operadores lógicos.
-- Funciones de agregación:
-  - SUM()
-  - COUNT()
-  - AVG()
-  - MIN()
-  - MAX()
-- GROUP BY.
-- HAVING.
-- CASE WHEN.
-
-Además desarrollé consultas analíticas para:
-
-- Ranking de productos.
-- Ventas por región.
-- Clientes activos.
-- Indicadores comerciales.
-
-**Aprendizaje clave:** transformar datos transaccionales en información relevante para la toma de decisiones.
+* Medidas descriptivas.
+* Distribuciones.
+* Outliers.
+* Publicación en Power BI Service.
 
 ---
 
-# Módulo 5 – JOINs, UNION y Consolidación de Datos
+# Herramientas Utilizadas
 
-Durante el Módulo 5 trabajé técnicas avanzadas de combinación y consolidación de datos provenientes de múltiples tablas y fuentes.
-
-Aprendí cómo integrar información relacional mediante JOINs y cómo consolidar conjuntos de resultados utilizando UNION y UNION ALL.
-
-Entre los principales contenidos abordados se destacan:
-
-### INNER JOIN
-
-Permite obtener únicamente los registros que tienen coincidencia en ambas tablas.
-
-Aplicaciones:
-
-- Clientes con pedidos.
-- Ventas con información de productos.
-- Construcción de vistas analíticas para Power BI.
-
-### LEFT JOIN
-
-Permite conservar todos los registros de la tabla principal, incluso cuando no existe coincidencia en la tabla relacionada.
-
-Aplicaciones:
-
-- Clientes sin compras.
-- Productos sin ventas.
-- Auditorías de integridad de datos.
-
-### RIGHT JOIN
-
-Permite conservar todos los registros de la tabla derecha y detectar elementos sin correspondencia en la tabla izquierda.
-
-### FULL OUTER JOIN
-
-Permite obtener todos los registros de ambas tablas, identificando coincidencias y diferencias.
-
-Aplicaciones:
-
-- Procesos de conciliación.
-- Auditorías de sistemas.
-- Integración de bases de datos.
-
-### UNION
-
-Combina resultados eliminando registros duplicados.
-
-Aplicaciones:
-
-- Catálogos maestros.
-- Consolidación de clientes únicos.
-- Listados sin duplicados.
-
-### UNION ALL
-
-Combina resultados preservando todos los registros.
-
-Aplicaciones:
-
-- Consolidación de ventas.
-- Inventarios distribuidos.
-- Logs y auditorías.
-
-### Orden de ejecución de SQL
-
-También estudié cómo procesa internamente una consulta el motor de base de datos:
-
-1. FROM / JOIN
-2. WHERE
-3. GROUP BY
-4. HAVING
-5. SELECT
-6. DISTINCT
-7. ORDER BY
-8. LIMIT / TOP
-
-Comprender este flujo permitió interpretar errores frecuentes y optimizar consultas de forma más eficiente.
-
-**Aprendizaje clave:** integrar datos provenientes de múltiples tablas y fuentes para construir datasets analíticos completos y consistentes.
+* SQL Server
+* MySQL
+* Power BI
+* Power Query
+* DAX
+* Microsoft Excel
+* ChatGPT
+* GitHub
 
 ---
-# Modulo 6  Introduccion a Power BI y Transformacion de datos 
+
+# Objetivo del Repositorio
+
+Documentar la evolución técnica desarrollada durante la formación en Data Analytics y conservar los ejercicios, proyectos y entregables realizados a lo largo de la cursada.
 
 # Documentación de Transformaciones Realizadas
 
@@ -447,49 +341,6 @@ in
 ```
 
 ---
-
-## ¿Por qué es útil para un analista de datos entender la estructura let … in?
-
-La estructura let … in representa el flujo de ejecución de Power Query.
-
-Cada paso genera un resultado que es utilizado por el siguiente paso hasta llegar al resultado final indicado en la cláusula in.
-
-Comprender esta estructura permite:
-
-* Identificar errores.
-* Modificar transformaciones manualmente.
-* Reutilizar lógica entre proyectos.
-* Crear procesos más complejos que los disponibles desde la interfaz gráfica.
-
----
-
-## ¿Qué significa que el lenguaje M sea Case Sensitive?
-
-Significa que diferencia entre mayúsculas y minúsculas.
-
-Por ejemplo:
-
-```m
-Table.SelectRows
-```
-
-es válido, mientras que:
-
-```m
-table.selectrows
-```
-
-produce un error.
-
-Ignorar esta característica puede impedir que Power Query reconozca funciones, variables o pasos definidos previamente.
-
----
-
-## Conclusiones
-
-Esta práctica permitió comprender cómo Power Query traduce las acciones realizadas desde la interfaz gráfica a lenguaje M. También permitió modificar manualmente una consulta mediante el Editor Avanzado, reforzando la comprensión del flujo de transformación de datos utilizado por Power BI.
-
-Asimismo, se comprobó la importancia de comprender la estructura let … in, la sensibilidad a mayúsculas y minúsculas del lenguaje M y el impacto que tienen las transformaciones de limpieza sobre la calidad de los datos antes de su utilización en procesos de análisis y visualización.
 
 # Lenguaje M en el Editor Avanzado: limpieza de datos sin usar la interfaz gráfica
 
@@ -1135,25 +986,3 @@ Las medidas refactorizadas eliminaron cálculos repetidos, mejoraron significati
 
 Este enfoque resulta especialmente valioso en entornos colaborativos donde múltiples analistas trabajan sobre un mismo modelo de datos y donde la claridad del código es tan importante como su correcto funcionamiento.
 
-# Competencias Desarrolladas
-
-A lo largo del curso desarrollé habilidades en:
-
-- Modelado de datos.
-- Diseño de bases de datos relacionales.
-- Normalización.
-- SQL para análisis de datos.
-- Construcción de consultas complejas.
-- JOINs y consolidación de información.
-- Agregaciones y métricas de negocio.
-- Detección de inconsistencias de datos.
-- Preparación de datasets para Business Intelligence.
-- Pensamiento analítico orientado a la toma de decisiones.
-
----
-
-# Conclusión
-
-Este repositorio funciona como una bitácora de aprendizaje que documenta mi evolución dentro del curso de Data Analytics de Coderhouse.
-
-El recorrido realizado hasta el momento me permitió adquirir una base sólida en modelado de datos, SQL y análisis de información, desarrollando competencias aplicables a proyectos reales de Business Intelligence y Data Analytics.
