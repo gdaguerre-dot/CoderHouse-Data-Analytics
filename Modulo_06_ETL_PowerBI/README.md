@@ -107,7 +107,7 @@ pbix/
 Ubicada en:
 
 ```text
-power_query/
+entregables/
 ```
 
 ---
