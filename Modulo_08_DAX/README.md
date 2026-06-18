@@ -249,34 +249,6 @@ DIVIDE(GananciaTotal, VentasTotales) * 100
 
 ---
 
-## Archivos del Proyecto
-
-### Power BI
-
-Ubicados en:
-
-```
-pbix/
-```
-
-### Documentación
-
-Ubicada en:
-
-```
-entregables/
-```
-
-### Evidencias Visuales
-
-Ubicadas en:
-
-```
-imagenes/
-```
-
----
-
 ## Aprendizajes Técnicos
 
 - Modelado dimensional.
