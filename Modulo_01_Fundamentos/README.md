@@ -6,34 +6,33 @@ Comprender los conceptos fundamentales del análisis de datos, el rol del Data A
 
 ## Contenidos Trabajados
 
-* Datos, información y conocimiento.
-* Ecosistema de datos.
-* Business Intelligence.
-* Data Analytics y Data Science.
-* Metodología CRISP-DM.
-* KPIs e indicadores.
-* Formulación de preguntas de negocio.
+- Datos, información y conocimiento.
+- Business Intelligence.
+- Data Analytics.
+- Data Science.
+- Metodología CRISP-DM.
+- KPIs e indicadores.
+- Formulación de preguntas de negocio.
 
-## Herramientas Utilizadas
+## Herramientas Introducidas
 
-* Excel
-* Power BI (introducción)
-* GitHub
+- Excel
+- SQL
+- Python
+- Power BI
+- GitHub
 
-## Actividades Realizadas
+## Casos Prácticos
 
-* Análisis de casos de negocio.
-* Definición de indicadores.
-* Aplicación inicial de CRISP-DM.
-* Caso práctico Patria Gráfica.
+- CoffeeInsight
+- RetailPro
+- Diseño conceptual de proyectos 
 
-## Entregables
+## Competencias Desarrolladas
 
-(Agregar aquí los archivos o evidencias correspondientes)
-
-## Aprendizajes Técnicos
-
-* Comprensión del ciclo analítico.
-* Diseño de métricas e indicadores.
-* Relación entre datos y toma de decisiones.
+- Comprensión del ciclo analítico.
+- Diseño inicial de KPIs.
+- Formulación de preguntas de negocio.
+- Comprensión del rol del Data Analyst.
+- Introducción al ecosistema de datos.
 
