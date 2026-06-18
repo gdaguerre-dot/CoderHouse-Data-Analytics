@@ -181,36 +181,6 @@ Implementar una cobertura temporal o retráctil para la terraza y desarrollar pr
 
 La actividad permitió comprender que los dashboards generan valor cuando transforman datos en decisiones concretas mediante una narrativa clara, comprensible y orientada a la acción.
 
----
-
-## Archivos del Proyecto
-
-### Dashboards
-
-Ubicados en:
-
-```text
-dashboards/
-```
-
-Contienen:
-
-- Mockup Cafeitaly.
-- Dashboard Cafeitaly.
-- Dashboard Data Coffee.
-
-### Archivos Power BI
-
-Ubicados en:
-
-```text
-pbix/
-```
-
-Contienen los proyectos desarrollados durante el módulo.
-
----
-
 ## Aprendizajes Técnicos
 
 - Diseño de dashboards profesionales.
