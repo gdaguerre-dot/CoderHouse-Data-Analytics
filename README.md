@@ -36,7 +36,7 @@ Durante la cursada se trabajó sobre conceptos vinculados al modelado de datos, 
 - Business Intelligence
 - CRISP-DM
 - Indicadores clave de desempeño (KPIs)
-- Caso práctico Patria Gráfica
+- Casos prácticos 
 
 ### Módulo 2 – Modelado y Arquitectura de Datos
 
