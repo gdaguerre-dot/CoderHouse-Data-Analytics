@@ -2,17 +2,20 @@
 
 ## Objetivo
 
-Aprender a diseñar estructuras de datos eficientes para almacenamiento y análisis.
+Aprender a diseñar estructuras de datos eficientes para almacenamiento, gestión y análisis de información.
 
 ## Contenidos Trabajados
 
 * Diagramas Entidad-Relación (DER).
-* Entidades y atributos.
+* Entidades, atributos y relaciones.
 * Claves primarias y foráneas.
-* Normalización.
+* Normalización (1NF, 2NF y 3NF).
+* Integridad referencial.
 * Arquitecturas OLTP y OLAP.
 * Data Warehouse.
 * Modelado dimensional.
+* Star Schema y Snowflake Schema.
+* Introducción a plataformas analíticas modernas (Snowflake, BigQuery y Azure Synapse).
 
 ## Herramientas Utilizadas
 
@@ -22,16 +25,23 @@ Aprender a diseñar estructuras de datos eficientes para almacenamiento y análi
 
 ## Actividades Realizadas
 
-* Diseño de modelos ER.
+* Diseño de modelos Entidad-Relación.
 * Construcción de esquemas relacionales.
-* Aplicación de normalización.
+* Aplicación de procesos de normalización.
+* Comparación entre arquitecturas transaccionales y analíticas.
+* Diseño conceptual de modelos dimensionales para Business Intelligence.
 
 ## Entregables
 
-(Agregar aquí DER, diagramas y documentación)
+* Ejercicio de normalización RetailPro.
+* Ejercicio de normalización RetroVibes Video Club.
+* Diagramas Entidad-Relación desarrollados durante la cursada.
 
 ## Aprendizajes Técnicos
 
 * Diseño de bases de datos relacionales.
-* Modelado dimensional.
-* Integridad referencial.
+* Aplicación de normalización para reducir redundancia.
+* Diseño de claves primarias y foráneas.
+* Comprensión de arquitecturas OLTP y OLAP.
+* Modelado dimensional mediante Star Schema y Snowflake Schema.
+* Comprensión de la estructura de un Data Warehouse.
